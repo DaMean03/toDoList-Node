@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap");
+body {
+  background: linear-gradient(205deg, rgb(40, 42, 44) 62%, rgb(15, 49, 84) 53%, rgb(8, 23, 39) 100%) !important;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+}
+
+.date {
+  box-shadow: -8px 8px 35px -6px rgb(0, 0, 0);
+  background: rgb(15, 49, 84);
+  color: white;
+  font-size: 2rem;
+}
+
+.list {
+  box-shadow: -8px 8px 35px -6px rgb(0, 0, 0);
+}
+.list__title {
+  background: #0f3154;
+  color: white;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.list__controls {
+  background: radial-gradient(ellipse at 50% 50%, rgb(25, 59, 94) 37%, rgb(15, 49, 84) 63%);
+  border-bottom: 2px rgb(200, 200, 200) solid;
+  padding-block: 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.list__items {
+  background: rgb(250, 250, 250);
+  max-height: 60vh;
+  overflow: scroll;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+}
+.list__input {
+  background: rgb(15, 49, 84);
+  border-top: 2px rgb(200, 200, 200) solid;
+}
+
+.item {
+  border-bottom: 1px rgb(220, 220, 220) solid;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.item__box {
+  margin-right: 1rem;
+}
+.item__box::after {
+  content: "";
+}
+.item__text {
+  font-weight: 300;
+  line-height: 1.375;
+  text-align: left;
+}
+.item:last-child {
+  border: none;
+}
+
+.form {
+  display: flex;
+  justify-content: space-around;
+}
+.form__input {
+  background: rgb(250, 250, 250);
+  border: none;
+  border-bottom: 1px rgb(200, 200, 200) solid;
+  border-radius: 5px;
+  width: 75%;
+  padding-inline: 1rem;
+}
+.form__input:focus {
+  outline: none;
+  border: none;
+  box-shadow: -8px 8px 10px -6px rgb(0, 0, 0);
+}
+.form__input::-moz-placeholder {
+  text-align: center;
+}
+.form__input::placeholder {
+  text-align: center;
+}
+.form__btn {
+  background: rgb(200, 200, 200);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.75rem;
+  padding-inline: 1rem;
+}
+.form__btn:hover {
+  background: rgb(210, 210, 210);
+}/*# sourceMappingURL=main.css.map */

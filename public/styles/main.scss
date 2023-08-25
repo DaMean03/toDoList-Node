@@ -1,0 +1,123 @@
+@use "./components/mixins";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap");
+
+body {
+  background: linear-gradient(
+    205deg,
+    rgba(40, 42, 44, 1) 62%,
+    rgba(15, 49, 84, 1) 53%,
+    rgba(8, 23, 39, 1) 100%
+  ) !important;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+}
+
+.date {
+  @include mixins.box-shadow(35px);
+  background: rgba(15, 49, 84, 1);
+  color: white;
+  font-size: 2rem;
+}
+
+.list {
+  @include mixins.box-shadow(35px);
+
+  &__title {
+    background: #0f3154;
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  &__controls {
+    background: radial-gradient(
+      ellipse at 50% 50%,
+      rgba(25, 59, 94, 1) 37%,
+      rgba(15, 49, 84, 1) 63%
+    );
+    @include mixins.border(200, 2px);
+    padding-block: 0.5rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__items {
+    @include mixins.color(250);
+    max-height: 60vh;
+    // @include media-breakpoint-down(md) {
+    //   max-height: 40vh;
+    // }
+    overflow: scroll;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+  }
+
+  &__input {
+    background: rgba(15, 49, 84, 1);
+    border-top: 2px rgba(200, 200, 200, 1) solid;
+  }
+}
+
+.item {
+  @include mixins.border(220, 1px);
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+
+  &__box {
+    margin-right: 1rem;
+
+    &::after {
+      content: "";
+    }
+  }
+
+  &__text {
+    font-weight: 300;
+    line-height: 1.375;
+    text-align: left;
+  }
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: space-around;
+
+  &__input {
+    @include mixins.color(250);
+    border: none;
+    @include mixins.border(200, 1px);
+    border-radius: 5px;
+    width: 75%;
+    padding-inline: 1rem;
+
+    &:focus {
+      outline: none;
+      border: none;
+
+      @include mixins.box-shadow(10px);
+    }
+
+    &::placeholder {
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    @include mixins.color(200);
+    border: none;
+    border-radius: 50%;
+    font-size: 1.75rem;
+    padding-inline: 1rem;
+
+    &:hover {
+      @include mixins.color(210);
+    }
+  }
+}

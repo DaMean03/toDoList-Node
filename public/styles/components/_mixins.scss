@@ -1,0 +1,13 @@
+@mixin box-shadow($blur) {
+  -webkit-box-shadow: -8px 8px $blur -6px rgba(0, 0, 0, 1);
+  -moz-box-shadow: -8px 8px $blur -6px rgba(0, 0, 0, 1);
+  box-shadow: -8px 8px $blur -6px rgba(0, 0, 0, 1);
+}
+
+@mixin color($hue) {
+  background: rgba($hue, $hue, $hue, 1);
+}
+
+@mixin border($hue, $width) {
+  border-bottom: $width rgba($hue, $hue, $hue, 1) solid;
+}
