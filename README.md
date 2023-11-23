@@ -1,4 +1,5 @@
 Like every rookie I started with making a to-Do List app.
+It's simple with only interactions being posting and deleting your tasks.
 
 Stack:
 Node
